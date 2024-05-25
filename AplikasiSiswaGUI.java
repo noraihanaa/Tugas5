@@ -6,14 +6,14 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.List;
 
-public class AplikasiSiswaGUI extends JFrame {
+public class AplikasiSiswa extends JFrame {
     private JTable tabel;
     private DefaultTableModel model;
     private JTextField namaField;
     private JTextField umurField;
     private Database dbManager;
 
-    public AplikasiSiswaGUI() {
+    public AplikasiSiswa() {
         dbManager = new Database();
 
         setTitle("Database Siswa");
@@ -84,7 +84,7 @@ public class AplikasiSiswaGUI extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new AplikasiSiswaGUI();
+                new AplikasiSiswa();
             }
         });
     }
